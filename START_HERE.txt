@@ -1,0 +1,33 @@
+v29 — TERMUX-DA BAŞLATMAQ  (Downloads-dakı zip üçün)
+
+═══ İLK DƏFƏ (bir dəfə) ═══
+  termux-setup-storage
+  pkg update -y && pkg install python unzip -y
+
+═══ HƏR DƏFƏ (kopyala-yapışdır) ═══
+  cp ~/storage/downloads/tt_live_chest_bot_v29.zip ~
+  cd ~ && unzip -o tt_live_chest_bot_v29.zip && cd tt_live_chest_bot_v13
+  bash baslat_hamisi.sh
+
+  • İlk işə salanda token və chat ID soruşur (sonra .env-də yadda qalır).
+  • Köhnə qovluğun üstünə açanda .env, venv, results, users.txt QALIR.
+  • Dayandırmaq: Ctrl+C.  Fonda işləsin deyə: Termux bildirişində "Acquire wakelock" də bas.
+  • Fayl limiti xəbərdarlığı çıxsa:  ulimit -n 32768  yazıb təkrar başlat.
+
+═══ PROXY ═══
+  • Yeni proxy faylı atmaq üçün: onu Downloads-a at (ad: http.txt / get.txt / data.txt / proxy.txt / Free_Proxy_List.txt)
+    — bot başlayanda özü tapır, TikTok-a qarşı YOXLAYIR, yalnız işləyənləri saxlayır.
+  • Yoxlanmış işləyənlər results/proxies_memory.json + proxies_good.txt-də yadda qalır (zipi təkrar açmaq silmir).
+  • Siyahılar: proxy_lists/data.txt (~87 min), get.txt (2000), http.txt (~3200). Bot hər 30 dəq təzə siyahı endirir.
+  • İlk başlanğıcda yoxlama ~10 dəq çəkir (hər başlanğıcda növbəti hissə); bot bu vaxt öz IP ilə işləyir.
+
+═══ LİMİT ═══
+  • Eyni anda maksimum canlı: 3000 (FLEET_MAX_LIVES).  Real say proxy sayından və TikTok bloklarından asılıdır.
+  • Loqda:  "[ORDU] 🎯 eyni anda maksimum canlı hədd: 3000 | real tutum: ..."  — tutum 3000-dən azdırsa daha çox işləyən proxy lazımdır.
+
+═══ HƏDİYYƏ ÇANTASI (Lucky / Goody Bag) ═══
+  Telegram: /canta ad  → çantanı qoy → bot yeni mesaj növünü öyrənir;  /cantalar, /canta_elave, /canta_sil, /canta_bit, /canta_test, /metodlar
+  Açar sözlər: luckybag_keywords.txt (redaktə edə bilərsən). Alış-veriş (LiveBag/shopping bag) sözləri yalan siqnal verməsin deyə "weak"-ə keçirildi.
+
+═══ ƏSAS ƏMRLƏR ═══
+  /menu  /status  /panel  /hazirla  /yoxla ad  /canli  /top  /surat  /kanallar  /fayllar

@@ -1,0 +1,21 @@
+# TikTokLive (vendor/TikTokLive) asılılıqları
+httpx>=0.28.1
+pyee==13.0.1
+ffmpy>=0.3.0
+websockets_proxy==0.1.3
+betterproto2==0.9.1
+async-timeout>=4.0.3
+mashumaro>=3.5
+protobuf3-to-dict>=0.1.5
+protobuf>=3.19.4
+TikTokLiveProto==0.2.2
+EulerApiSdk==0.1.0
+
+# PirateTok live-py (vendor/live-py) asılılıqları
+betterproto>=2.0.0b7
+websockets>=15.0
+curl_cffi>=0.7.0
+python-socks[asyncio]>=2.5
+
+# kanal_cek.py (köhnə postları oxumaq üçün, istəyə bağlı)
+telethon>=1.36
