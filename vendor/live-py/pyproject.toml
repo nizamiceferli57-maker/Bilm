@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "piratetok-live-py"
+version = "0.3.0"
+description = "TikTok Live WebSocket connector — real-time chat, gifts, likes, and viewer events. No authentication required."
+readme = "README.md"
+license = "0BSD"
+requires-python = ">=3.11"
+authors = [{name = "Zmole Cristian"}]
+keywords = ["tiktok", "tiktok-live", "live", "stream", "chat", "gifts", "websocket", "protobuf", "realtime", "piratetok"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "betterproto>=2.0.0b7",
+    "websockets>=15.0",
+    "curl_cffi>=0.7.0",
+    "python-socks[asyncio]>=2.5",
+]
+
+[project.urls]
+Homepage = "https://piratetok.rosint.org"
+Funding = "https://piratetok.rosint.org/donate.html"
+Repository = "https://github.com/PirateTok/live-py"
+Issues = "https://github.com/PirateTok/live-py/issues"
+
+[project.optional-dependencies]
+dev = ["mypy", "ruff"]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["piratetok_live*"]
+
+[tool.pytest.ini_options]
+markers = [
+    "integration: live network tests gated by PIRATETOK_LIVE_TEST_* env vars",
+]
